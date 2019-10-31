@@ -1,0 +1,28 @@
+{
+  "name": "web-media-player",
+  "version": "1.0.0",
+  "description": "SPA that uses the Spotify API to fetch and stream content from SPotify using the Spotify API",
+  "main": "js/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drzoidberg/gh-entregables_01_soundcloud-player.git"
+  },
+  "keywords": [
+    "webplayer",
+    "spotify",
+    "api",
+    "css",
+    "experiment",
+    "bootcamp",
+    "geekshubs"
+  ],
+  "author": "Jorge Vicens Valor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drzoidberg/gh-entregables_01_soundcloud-player/issues"
+  },
+  "homepage": "https://github.com/drzoidberg/gh-entregables_01_soundcloud-player#readme"
+}
