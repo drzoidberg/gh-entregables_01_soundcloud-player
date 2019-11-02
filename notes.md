@@ -10,3 +10,13 @@ BQDG-y-Ddn1ySi9eJ5ph6p-ulIS_KBTEPkqnMYT9kEZ9H4tqx8WEgyigyJA7s9Y3Qm2-SQXJCVFmyC0D
 - añadir scroll infinito a los resultados
 - searching --> keyword matching. Order matters
 - modulos de control de errores en formularios
+
+
+<base href="http://127.0.0.1:5500/">
+este ABANS del head
+jo el tinc aixina...
+<link rel="stylesheet" href="./css/styles.css">
+   <base href="http://127.0.0.1:5500/">
+</head>
+I despres el script per a poder posar el reproductor es aquest...
+<script src="https://w.soundcloud.com/player/api.js"></script>
