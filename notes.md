@@ -23,16 +23,14 @@ I despres el script per a poder posar el reproductor es aquest...
 
 
 
-auto_play	true/false	Start playing the item automatically
-<!-- color	hex code	Color play button and other controls. e.g. “#0066CC” -->
-buying	true/false	Show/Hide buy buttons
-sharing	true/false	Show/Hide share buttons
-download	true/false	Show/Hide download buttons
-show_artwork	true/false	Show/Hide the item’s artwork
-show_playcount	true/false	Show/Hide number of track plays
-show_user	true/false	Show/Hide the uploader name
-start_track	number	A number from 0 to the playlist length which reselects the track in a playlist
-single_active	true/false	If set to false the multiple players on the page won’t toggle each other off when playing
 
 
--
+
+ROADMAP
+    - lógica acabada
+    - interfaz usando bootstrap fluido + adaptable, 100% pantalla
+    - control de errores
+    - scroll infinito para los resultados
+    - limpiar JS
+    - crear un funciones/conjunto de archivos que manejen los estilos css de los nodos (un React de ir por casa)
+    - realizar una versión usando el API y el SDK, sin el reproductor widget
