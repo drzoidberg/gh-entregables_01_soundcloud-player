@@ -20,3 +20,19 @@ jo el tinc aixina...
 </head>
 I despres el script per a poder posar el reproductor es aquest...
 <script src="https://w.soundcloud.com/player/api.js"></script>
+
+
+
+auto_play	true/false	Start playing the item automatically
+<!-- color	hex code	Color play button and other controls. e.g. “#0066CC” -->
+buying	true/false	Show/Hide buy buttons
+sharing	true/false	Show/Hide share buttons
+download	true/false	Show/Hide download buttons
+show_artwork	true/false	Show/Hide the item’s artwork
+show_playcount	true/false	Show/Hide number of track plays
+show_user	true/false	Show/Hide the uploader name
+start_track	number	A number from 0 to the playlist length which reselects the track in a playlist
+single_active	true/false	If set to false the multiple players on the page won’t toggle each other off when playing
+
+
+-
