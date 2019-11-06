@@ -12,31 +12,33 @@ document.addEventListener('DOMContentLoaded', (event) => {
         limit: ''
     }
 
-    // crea el container y lo inyecta en el DOM
+    const wrapper = document.getElementById('wrapper');
+
+    // crea el container y lo inyecta en el div.wrapper
     const div = document.createElement('div');
     div.setAttribute('id', 'iframeSCPlayerContainer');
 
     // crea el iframe con sus props y lo inyecta en el DOM
     const iframeSCObjectStart = new IframeSC();
-    iframeSCObjectStart.src += formatURIParams(iframeSCURIParams)
-    const iframeSCPlayer = createNode('iframe', iframeSCObjectStart );
+    iframeSCObjectStart.src += 'users/134165712&' + formatURIParams(iframeSCURIParams)
+    const iframeSCPlayer = createNode('iframe', iframeSCObjectStart);
     iframeSCPlayer.setAttribute('id', 'iframeSCPlayer');
-    document.body.appendChild(iframeSCPlayer);
+    wrapper.appendChild(iframeSCPlayer);
 
     // crea el div 'dropzone' y lo inyecta en el DOM
     const divSCDropzone = createNode('div', { id: 'divSCDropzone', class: 'dropzone', style: 'width: 332px; height: 166px; background: grey; display: inline-block' });
-    document.body.appendChild(divSCDropzone);
+    wrapper.appendChild(divSCDropzone);
 
     // y así sucesivamente…
-    const inputSCTextSearch = createNode('input', { type: 'text', id: 'inputSCTextSearch', placeholder: 'type in your query' } );
-    document.body.appendChild(inputSCTextSearch);
+    const inputSCTextSearch = createNode('input', { type: 'text', id: 'inputSCTextSearch', placeholder: 'type in your query', style: 'color: red' });
+    wrapper.appendChild(inputSCTextSearch);
 
-    const numResultsSC = createNode('input', { type: 'number', id: 'numResultsSC', min: 1, max: 30, step: 2, value: 10, placeholder: 'number of search results' } );
-    document.body.appendChild(numResultsSC);
+    const numResultsSC = createNode('input', { type: 'number', id: 'numResultsSC', min: 1, max: 30, step: 2, value: 10, placeholder: 'number of search results' });
+    wrapper.appendChild(numResultsSC);
 
-    const searchSCButton = createNode('button', { type: 'button', id: 'searchSCButton' } );
+    const searchSCButton = createNode('button', { type: 'button', id: 'searchSCButton' });
     searchSCButton.innerText = 'Search';
-    document.body.appendChild(searchSCButton);
+    wrapper.appendChild(searchSCButton);
 
     let resultTmp = '';
 
@@ -47,17 +49,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
         SC
             .get('/tracks/', busqueda)
-            .then( (results) => {
+            .then((results) => {
                 let contador = 1;
-                results.forEach( result => {
-                    resultTmp = createNode('p', { class: 'result', id: `result${contador}`, draggable: true, 'data-trackid':`${result.id}` });
+                results.forEach(result => {
+                    resultTmp = createNode('p', { class: 'result', id: `result${contador}`, draggable: true, 'data-trackid': `${result.id}` });
                     resultTmp.innerHTML = `${result.user.username}: ${result.title}`;
-                    document.body.appendChild(resultTmp);
+                    wrapper.appendChild(resultTmp);
                     contador++;
                 })
             })
             // .then( (results) => console.log(results[0].id) )
-            .catch( (error) => console.log(error))
+            .catch((error) => console.log(error))
     })
 
     ////// DRAG & DROP
@@ -75,8 +77,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // guarda la referencia del elemento dragged cuando empieza el drag y manipula el estilo
     document.addEventListener('dragstart', (event) => {
         dragged = event.target;
+        console.log(event.target.id);
         event.target.style.opacity = .5;
         dropzone.style.background = 'red';
+        // document.body.style.backgroundColor = 'black'
     });
 
     // cuando acaba el drag resetea el estilo del 'dropabble'
@@ -85,7 +89,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         dropzone.style.background = 'grey';
     });
 
-    // eventos de los elementos 'droppable'
+    // eventos de los element   os 'droppable'
     document.addEventListener('dragover', (event) => {
         // preventdefault para permitir el drop
         event.preventDefault();
@@ -93,7 +97,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     document.addEventListener('dragenter', (event) => {
         // marcar el dropzone cuando el elemento draggable entre en la dropzone
-        if ( event.target.className == 'dropzone' ) {
+        if (event.target.className == 'dropzone') {
             event.target.style.background = 'purple';
             // cambiar estilo css
         }
@@ -102,7 +106,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     document.addEventListener('dragleave', (event) => {
         // resetea el background al estilo 'dragstart' de dropzone objetivo cuando el elemento draggable lo abandona
-        if ( event.target.className == 'dropzone' ) {
+        if (event.target.className == 'dropzone') {
             event.target.style.background = 'red';
         }
 
@@ -110,16 +114,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     document.addEventListener('drop', (event) => {
         event.preventDefault();
-        if ( event.target.className == 'dropzone' ) {
-            event.target.style.background = '';
+        if (event.target.className == 'dropzone') {
+            // recargo el iframe con el nuevo src --> borro el iframe anterior y cargo uno nuevo con el src actualizado
+            let iframeToDelete = document.getElementById('iframeSCPlayer');
+            wrapper.removeChild(iframeToDelete);
+            // wrapper.removeChild(dragged);
+
+            const iframeSCObjectPlay = new IframeSC();
+            iframeSCObjectPlay.src += 'tracks/' + dragged.getAttribute('data-trackid') + '&' + formatURIParams(iframeSCURIParamsPlay)
+
+            const iframeSCPlayerFinal = createNode('iframe', iframeSCObjectPlay);
+            iframeSCPlayerFinal.setAttribute('id', 'iframeSCPlayer');
+            wrapper.appendChild(iframeSCPlayerFinal);
         }
-
     });
-
 })
-
-
-
-// SC.stream('/tracks/293').then(function(player){
-//     player.play();
-// });

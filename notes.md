@@ -26,11 +26,22 @@ I despres el script per a poder posar el reproductor es aquest...
 
 
 
-ROADMAP
-    - lógica acabada
-    - interfaz usando bootstrap fluido + adaptable, 100% pantalla
-    - control de errores
-    - scroll infinito para los resultados
-    - limpiar JS
-    - crear un funciones/conjunto de archivos que manejen los estilos css de los nodos (un React de ir por casa)
-    - realizar una versión usando el API y el SDK, sin el reproductor widget
+# ROADMAP
+    - lógica acabada [ ]
+    - interfaz usando flex fluida + adaptable, 100% pantalla [ ]
+    - scroll infinito para los resultados [ ]
+    - control de errores en input forms [ ]
+    - crear un conjunto de archivos/funciones que manejen los estilos css de los nodos (un React de ir por casa) [NO]
+    - animaciones: inicio, carga de tarjeta/resultado, switch de logo a iframe [ ]
+    - implementar jQuery con los layers de ayuda, los tooltips de cada cancion [ ]
+    - controlar por js variables de color [ ]
+    - conectar con otra API, o consultas avanzadas [ ]
+    - consulta de tag
+    - consulta de autor
+    - incorporar en localstorage una variable que controle el layer de ayuda [ ]
+    - carrusel de autores y canciones random [ ]
+    - añadir tags y LUEGO 'buscar'
+    - limpiar JS [ ]
+    - realizar una versión usando el API y el SDK, sin el reproductor widget [ ]
+    - realizar una versión usando lo que aprendido hasta la fecha de Angular [ ]
+
