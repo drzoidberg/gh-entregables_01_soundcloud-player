@@ -24,24 +24,30 @@ I despres el script per a poder posar el reproductor es aquest...
 
 
 
-
+# STEP-BY-STEP (20191107-0831)
+   - eliminar flujo actual de js [ ]
+   - centrarse en mobile por ahora [ ]
+   - crear estructura básica de html/css, donde ira cambiando dinamicamente usando js [ ]
+   - inyectar el iframeSCPlayer siempre en el mismo nodo [ ]
+      *la zona del reproductor y el iframe son 'aparentemente' la misma*
 
 # ROADMAP
-    - lógica acabada [ ]
-    - interfaz usando flex fluida + adaptable, 100% pantalla [ ]
-    - scroll infinito para los resultados [ ]
-    - control de errores en input forms [ ]
-    - crear un conjunto de archivos/funciones que manejen los estilos css de los nodos (un React de ir por casa) [NO]
-    - animaciones: inicio, carga de tarjeta/resultado, switch de logo a iframe [ ]
-    - implementar jQuery con los layers de ayuda, los tooltips de cada cancion [ ]
-    - controlar por js variables de color [ ]
-    - conectar con otra API, o consultas avanzadas [ ]
-    - consulta de tag
-    - consulta de autor
-    - incorporar en localstorage una variable que controle el layer de ayuda [ ]
-    - carrusel de autores y canciones random [ ]
-    - añadir tags y LUEGO 'buscar'
-    - limpiar JS [ ]
-    - realizar una versión usando el API y el SDK, sin el reproductor widget [ ]
-    - realizar una versión usando lo que aprendido hasta la fecha de Angular [ ]
+   - lógica básica acabada [x]
+   - interfaz usando flex fluida + adaptable, 100% pantalla [ ]
+   - scroll infinito para los resultados [ ]
+   - control de errores en input forms [ ]
+   - crear un conjunto de archivos/funciones que manejen los estilos css de los nodos (un React de ir por casa) [NO]
+   - animaciones: inicio, carga de tarjeta/resultado, switch de logo a iframe, "pulsating play" cuando se está reproduciendo una canción [ ]
+   - implementar jQuery con los layers de ayuda, los tooltips de cada cancion [ ]
+   - cuando se seleccione una búsqueda, ocultar el icono con una transición suave
+   - controlar por js variables de color [NO]
+   - conectar con otra API, o consultas avanzadas [ ]
+   - consulta de tag
+   - consulta de autor
+   - incorporar en localstorage una variable que controle el layer de ayuda [ ]
+   - carrusel de autores y canciones random [ ]
+   - añadir tags y LUEGO 'buscar'
+   - limpiar JS [ ]
+   - realizar una versión usando el API y el SDK, sin el reproductor widget [ ]
+   - realizar una versión usando lo que aprendido hasta la fecha de Angular [ ]
 

@@ -12,9 +12,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
         limit: ''
     }
 
-    const wrapper = document.getElementById('wrapper');
+    const iframeContainer = document.getElementsByClassName('iframe-container')[0];
 
-    // crea el container y lo inyecta en el div.wrapper
+    // crea el container y lo inyecta en el div.iframeContainer
     const div = document.createElement('div');
     div.setAttribute('id', 'iframeSCPlayerContainer');
 
@@ -23,22 +23,22 @@ document.addEventListener('DOMContentLoaded', (event) => {
     iframeSCObjectStart.src += 'users/134165712&' + formatURIParams(iframeSCURIParams)
     const iframeSCPlayer = createNode('iframe', iframeSCObjectStart);
     iframeSCPlayer.setAttribute('id', 'iframeSCPlayer');
-    wrapper.appendChild(iframeSCPlayer);
+    iframeContainer.appendChild(iframeSCPlayer);
 
     // crea el div 'dropzone' y lo inyecta en el DOM
     const divSCDropzone = createNode('div', { id: 'divSCDropzone', class: 'dropzone', style: 'width: 332px; height: 166px; background: grey; display: inline-block' });
-    wrapper.appendChild(divSCDropzone);
+    iframeContainer.appendChild(divSCDropzone);
 
     // y así sucesivamente…
     const inputSCTextSearch = createNode('input', { type: 'text', id: 'inputSCTextSearch', placeholder: 'type in your query', style: 'color: red' });
-    wrapper.appendChild(inputSCTextSearch);
+    iframeContainer.appendChild(inputSCTextSearch);
 
     const numResultsSC = createNode('input', { type: 'number', id: 'numResultsSC', min: 1, max: 30, step: 2, value: 10, placeholder: 'number of search results' });
-    wrapper.appendChild(numResultsSC);
+    iframeContainer.appendChild(numResultsSC);
 
     const searchSCButton = createNode('button', { type: 'button', id: 'searchSCButton' });
     searchSCButton.innerText = 'Search';
-    wrapper.appendChild(searchSCButton);
+    iframeContainer.appendChild(searchSCButton);
 
     let resultTmp = '';
 
