@@ -13,35 +13,81 @@
 
 <body>
     <div class="main-container">
-        <div class="dropzone-container">
-            <div class="logo-container">
-                <img class="logo" src="img/logo2x.jpg" alt="SoundCloud Logo">
-            </div>
-            <div class="dropzone">
-                <div class="marco-rayado" style="display:none">
-                    <p>Drag tracks here to play them</p>
+        <div class="controls-wrapper">
+            <div class="dropzone-container">
+                <div class="logo-container">
+                    <img class="logo" src="img/logo2x.jpg" alt="SoundCloud Logo">
                 </div>
-            </div>
-        </div>
-        <div class="toolbar-container">
-            <div class="form-container">
-                <div class="search-container">
-                    <img class="icon-search" src="img/icon-search.png">
-                    <input type="text" placeholder="Search tracks">
-                </div>
-                <div class="options-container">
-                    <div class="more-options-container">
-                        <img class="icon-more-options" src="img/icon-options.png">
-                        <p>Search options</p>
+                <div class="dropzone">
+                    <div class="marco-rayado" style="display:none">
+                        <p>Drag tracks here to play them</p>
                     </div>
-                    <div class="help-container">
-                        <img class="icon-more-options" src="img/icon-help.png">
-                        <p>Help</p>
+                </div>
+            </div>
+            <div class="toolbar-container">
+                <div class="form-container">
+                    <div class="wrapper">
+                        <div class="search-container">
+                            <div class="search-button">
+                                <img class="icon-search" src="img/icon-search.png">
+                            </div>
+                            <input class="search" type="text" placeholder="Search">
+                        </div>
+                        <div class="options-container">
+                            <div class="more-options-container">
+                                <img class="icon-more-options" src="img/icon-options.png">
+                                <p>Options</p>
+                            </div>
+                            <div class="help-container">
+                                <img class="icon-more-options" src="img/icon-help.png">
+                                <p>Help</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="results-container">
+            <div class="card">
+                <div class="tag-container">
+                    <a class="tag" href="#">#rock</a>
+                </div>
+                <div class="date"><span>1999</span></div>
+                <div class="name"><span>Wonderwall - Oasis</span></div>
+                <div class="author"><span>Florian N.</span></div>
+                <div class="picture-container">
+                    <a href="player-button-container">
+                        <img src="img/play-button.png" class="player-button" style="display:none">
+                        <div id="pulse"></div>
+                    </a>
+                    <img class="picture" src="img/test-img.png">
+                </div>
+                <div class="description">
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam nemo aliquam quod iste maiores
+                        voluptatibus…
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="tag-container">
+                    <a class="tag" href="#">#rock</a>
+                </div>
+                <div class="date"><span>1999</span></div>
+                <div class="name"><span>Wonderwall - Oasis</span></div>
+                <div class="author"><span>Florian N.</span></div>
+                <div class="picture-container playing">
+                    <img src="img/play-button.png" class="player-button">
+                    <div id="pulse" style="display:none"></div>
+                    <img src="img/test-img.png" style="display: none" class="picture">
+                </div>
+                <div class="description">
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam nemo aliquam quod iste maiores
+                        voluptatibus…
+                    </p>
+                </div>
+            </div>
             <div class="card">
                 <div class="tag-container">
                     <a class="tag" href="#">#rock</a>
@@ -63,24 +109,173 @@
                     </p>
                 </div>
             </div>
-        </div>
-        <div class="card">
-            <div class="tag-container">
-                <a class="tag" href="#">#rock</a>
+            <div class="card">
+                <div class="tag-container">
+                    <a class="tag" href="#">#rock</a>
+                </div>
+                <div class="date"><span>1999</span></div>
+                <div class="name"><span>Wonderwall - Oasis</span></div>
+                <div class="author"><span>Florian N.</span></div>
+                <div class="picture-container">
+                    <a href="player-button-container">
+                        <img src="img/play-button.png" class="player-button" style="display:none">
+                        <div id="pulse" style="display:none"></div>
+                    </a>
+                    <img class="picture" src="img/test-img.png">
+                </div>
+                <div class="description">
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam nemo aliquam quod iste maiores
+                        voluptatibus…
+                    </p>
+                </div>
             </div>
-            <div class="date"><span>1999</span></div>
-            <div class="name"><span>Wonderwall - Oasis</span></div>
-            <div class="author"><span>Florian N.</span></div>
-            <div class="picture-container playing">
-                <img src="img/play-button.png" class="player-button">
-                <div id="pulse" style="display:none"></div>
-                <img src="img/test-img.png" style="display: none" class="picture">
+            <div class="card">
+                <div class="tag-container">
+                    <a class="tag" href="#">#rock</a>
+                </div>
+                <div class="date"><span>1999</span></div>
+                <div class="name"><span>Wonderwall - Oasis</span></div>
+                <div class="author"><span>Florian N.</span></div>
+                <div class="picture-container">
+                    <a href="player-button-container">
+                        <img src="img/play-button.png" class="player-button" style="display:none">
+                        <div id="pulse" style="display:none"></div>
+                    </a>
+                    <img class="picture" src="img/test-img.png">
+                </div>
+                <div class="description">
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam nemo aliquam quod iste maiores
+                        voluptatibus…
+                    </p>
+                </div>
             </div>
-            <div class="description">
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam nemo aliquam quod iste maiores
-                    voluptatibus…
-                </p>
+            <div class="card">
+                <div class="tag-container">
+                    <a class="tag" href="#">#rock</a>
+                </div>
+                <div class="date"><span>1999</span></div>
+                <div class="name"><span>Wonderwall - Oasis</span></div>
+                <div class="author"><span>Florian N.</span></div>
+                <div class="picture-container">
+                    <a href="player-button-container">
+                        <img src="img/play-button.png" class="player-button" style="display:none">
+                        <div id="pulse" style="display:none"></div>
+                    </a>
+                    <img class="picture" src="img/test-img.png">
+                </div>
+                <div class="description">
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam nemo aliquam quod iste maiores
+                        voluptatibus…
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="tag-container">
+                    <a class="tag" href="#">#rock</a>
+                </div>
+                <div class="date"><span>1999</span></div>
+                <div class="name"><span>Wonderwall - Oasis</span></div>
+                <div class="author"><span>Florian N.</span></div>
+                <div class="picture-container">
+                    <a href="player-button-container">
+                        <img src="img/play-button.png" class="player-button" style="display:none">
+                        <div id="pulse" style="display:none"></div>
+                    </a>
+                    <img class="picture" src="img/test-img.png">
+                </div>
+                <div class="description">
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam nemo aliquam quod iste maiores
+                        voluptatibus…
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="tag-container">
+                    <a class="tag" href="#">#rock</a>
+                </div>
+                <div class="date"><span>1999</span></div>
+                <div class="name"><span>Wonderwall - Oasis</span></div>
+                <div class="author"><span>Florian N.</span></div>
+                <div class="picture-container">
+                    <a href="player-button-container">
+                        <img src="img/play-button.png" class="player-button" style="display:none">
+                        <div id="pulse" style="display:none"></div>
+                    </a>
+                    <img class="picture" src="img/test-img.png">
+                </div>
+                <div class="description">
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam nemo aliquam quod iste maiores
+                        voluptatibus…
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="tag-container">
+                    <a class="tag" href="#">#rock</a>
+                </div>
+                <div class="date"><span>1999</span></div>
+                <div class="name"><span>Wonderwall - Oasis</span></div>
+                <div class="author"><span>Florian N.</span></div>
+                <div class="picture-container">
+                    <a href="player-button-container">
+                        <img src="img/play-button.png" class="player-button" style="display:none">
+                        <div id="pulse" style="display:none"></div>
+                    </a>
+                    <img class="picture" src="img/test-img.png">
+                </div>
+                <div class="description">
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam nemo aliquam quod iste maiores
+                        voluptatibus…
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="tag-container">
+                    <a class="tag" href="#">#rock</a>
+                </div>
+                <div class="date"><span>1999</span></div>
+                <div class="name"><span>Wonderwall - Oasis</span></div>
+                <div class="author"><span>Florian N.</span></div>
+                <div class="picture-container">
+                    <a href="player-button-container">
+                        <img src="img/play-button.png" class="player-button" style="display:none">
+                        <div id="pulse" style="display:none"></div>
+                    </a>
+                    <img class="picture" src="img/test-img.png">
+                </div>
+                <div class="description">
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam nemo aliquam quod iste maiores
+                        voluptatibus…
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="tag-container">
+                    <a class="tag" href="#">#rock</a>
+                </div>
+                <div class="date"><span>1999</span></div>
+                <div class="name"><span>Wonderwall - Oasis</span></div>
+                <div class="author"><span>Florian N.</span></div>
+                <div class="picture-container">
+                    <a href="player-button-container">
+                        <img src="img/play-button.png" class="player-button" style="display:none">
+                        <div id="pulse" style="display:none"></div>
+                    </a>
+                    <img class="picture" src="img/test-img.png">
+                </div>
+                <div class="description">
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam nemo aliquam quod iste maiores
+                        voluptatibus…
+                    </p>
+                </div>
             </div>
         </div>
     </div>

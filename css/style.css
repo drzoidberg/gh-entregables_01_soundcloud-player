@@ -2,7 +2,6 @@ html {
     box-sizing: border-box;
     font-size: 16px;
     font-family: "Lucida Grande", Arial, sans-serif;
-
 }
 
 *, *:before, *:after {
@@ -12,12 +11,14 @@ html {
 }
 
 .main-container {
-    width: 320px;
+    width: 100%;
+    min-width: 320px;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column;
+    background: white;
 }
 
 .logo-container {
@@ -28,20 +29,15 @@ html {
 
 .logo-container img.logo {
     width: 100%;
-}
-
-.toolbar-container {
-    height: 100%;
+    text-align: center;
 }
 
 .dropzone-container {
     width: 280px;
     height: 166px;
+    align-self: center;
     overflow: hidden;
     z-index: 999;
-    -webkit-box-shadow: 0px 36px 31px -32px rgba(0,0,0,0.5);
-    -moz-box-shadow: 0px 36px 31px -32px rgba(0,0,0,0.5);
-    box-shadow: 0px 36px 31px -32px rgba(0,0,0,0.5);
 }
 
 .search-container {
@@ -81,7 +77,7 @@ html {
 .toolbar-container {
     height: 107px;
     background: linear-gradient(-180deg, #424242 0%, #4B4B4B 100%);
-    margin-bottom: 20px;
+    width: 100%;
 }
 
 .options-container {
@@ -92,7 +88,12 @@ html {
     margin-top: 13px;
 }
 
-.form-container input[type='text']{
+.form-container {
+    display: flex;
+    justify-content: center;
+}
+
+.form-container input[type="text"].search {
     width: 280px;
     height: 36px;
     border-radius: 4px;
@@ -100,14 +101,46 @@ html {
     font-family: inherit;
     margin: 20px 20px 0 20px;
     padding-left: 14px;
-    border: none;
+    border: 1px solid transparent;
+    transition: .15s all;
+}
+
+.form-container input[type="text"].search:focus {
+    outline: none;
+    border: 1px solid #FFAE6D;
+    box-shadow: 0 0 5px #FFAE6D;
+}
+
+.form-container .wrapper {
+    width: 320px;
 }
 
 .icon-search {
     position: absolute;
-    left: 270px;
-    top: 30px;
     height: 16px;
+    left: 16px;
+    top: 10px;
+}
+
+.search-button {
+    position: absolute;
+    top: 21px;
+    right: 21px;
+    width: 50px;
+    height: 34px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background: #DCDCDC;
+    cursor: pointer;
+    transition: .05s all;
+}
+
+.search-button:hover {
+    background: #CCCCCC;
+}
+
+.search-button:active {
+        background: #BBBBBB;
 }
 
 .more-options-container,
@@ -115,6 +148,7 @@ html {
     display: flex;
     /* position: absolute; */
     top: 72px;
+    cursor: pointer;
 }
 
 .help-container {
@@ -136,20 +170,45 @@ html {
 
 .results-container {
     height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat( auto-fill, minmax(290px, 1fr) );
+    grid-gap: 15px 15px;
+    /* justify-content: center; */
+    /* flex-flow: row;
+    flex-wrap: wrap; */
+    /* justify-content: space-evenly; */
+    padding: 0 15px 0 15px;
+    position: relative;
+    top: 290px;
+}
+
+.controls-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    background: white;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+    box-shadow: 0 1px 6px 0 #333333BB;
 }
 
 .card {
     position: relative;
     width: 290px;
     height: 160px;
-    margin-bottom: 15px;
+    /* margin: 14px 7px 0 7px; */
     overflow: hidden;
+    justify-self: center;
     background-image: linear-gradient(-180deg, #FEFAF4 0%, #FFFCF9 100%);
     border: 1px solid #DECBC5;
     border-radius: 4px;
     cursor: default;
     transition: .25s all;
 }
+
 
 .card:hover {
     border: 1px solid #EC6739;
@@ -234,7 +293,7 @@ html {
     border-radius: 50%;
 }
 
-.card .picture-container.playing .pulse {
+.card .picture-container.playing #pulse {
     width: 90px;
     height: 90px;
     background: #FD8322;
@@ -255,7 +314,7 @@ html {
 .card .description p {
     font-size: .8rem;
     color: #959595;
-    -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,1) 42%, rgba(0,0,0,0) 100%);
+    -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,1) 42%, rgba(0,0,0,.33) 100%);
 }
 
 

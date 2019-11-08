@@ -37,9 +37,11 @@ I despres el script per a poder posar el reproductor es aquest...
    - scroll infinito para los resultados [ ]
    - control de errores en input forms [ ]
    - crear un conjunto de archivos/funciones que manejen los estilos css de los nodos (un React de ir por casa) [NO]
+   - controla los min-widths de los elementos [ ]
    - animaciones: inicio, carga de tarjeta/resultado, switch de logo a iframe, "pulsating play" cuando se está reproduciendo una canción [ ]
    - implementar jQuery con los layers de ayuda, los tooltips de cada cancion [ ]
-   - cuando se seleccione una búsqueda, ocultar el icono con una transición suave
+   - cuando se seleccione una búsqueda, ocultar el icono con una transición suave [ ]
+   - un funcion que corte texto de descripcion [ ]
    - controlar por js variables de color [NO]
    - conectar con otra API, o consultas avanzadas [ ]
    - consulta de tag
