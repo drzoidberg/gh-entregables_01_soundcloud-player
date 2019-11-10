@@ -5,7 +5,7 @@ class IframeSC {
     // '166' es el valor elegido en la altura  porque es el valor que proporciona por defecto SC en su iframe
 
     baseURL = 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/';
-    constructor(id = 'sc-widget', width = '1200', height = '166', scrolling = 'no', frameborder = 'no', allow = 'autoplay', src = this.baseURL) {
+    constructor(id = 'sc-widget', width = '100%', height = '166', scrolling = 'no', frameborder = 'no', allow = 'autoplay', src = this.baseURL) {
         this.id = id;
         this.width = width;
         this.height = height;

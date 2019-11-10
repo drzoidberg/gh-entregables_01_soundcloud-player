@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- <base href="http://127.0.0.1:5500/"> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Soundcloud Tiny Player</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="controls-wrapper">
+            <div class="dropzone-container">
+                <div class="logo-container">
+                    <img class="logo" src="img/logo2x.jpg" alt="SoundCloud Logo">
+                </div>
+                <div class="dropzone">
+                    <div class="marco-rayado" style="display:none">
+                        <p>Drag tracks here to play them</p>
+                    </div>
+                </div>
+            </div>
+            <div class="toolbar-container">
+                <div class="form-container">
+                    <div class="wrapper">
+                        <div class="search-container">
+                            <div id="search-button">
+                                <img class="icon-search" src="img/icon-search.png">
+                            </div>
+                            <input id="search-text-field" type="text" placeholder="Search">
+                        </div>
+                        <div class="options-container">
+                            <div class="more-options-container">
+                                <img class="icon-more-options" src="img/icon-options.png">
+                                <p>Options</p>
+                            </div>
+                            <div class="help-container">
+                                <img class="icon-more-options" src="img/icon-help.png">
+                                <p>Help</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="results-container">
+            <div class="card">
+                <div class="duration-container">
+                    <a class="duration" href="#">88:88</a>
+                </div>
+                <div class="genre-container">
+                    <img src="img/icon-genre.png" class="icon-genre">
+                    <a class="genre" href="#">Hip-hop</a>
+                </div>
+                <div class="date"><span>1999/04/30</span></div>
+                <div class="name"><span>Wonderwall - Oasis</span></div>
+                <div class="author"><span>Florian N.</span></div>
+                <div class="picture-container">
+                    <a href="player-button-container">
+                        <img src="img/play-button.png" class="player-button">
+                        <div id="pulse"></div>
+                        <img class="picture" src="img/test-img.png">
+                    </a>
+                </div>
+                <div class="description">
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam nemo aliquam
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="tag-container">
+                    <a class="tag" href="#">#rock</a>
+                </div>
+                <div class="date"><span>1999</span></div>
+                <div class="name"><span>Wonderwall - Oasis</span></div>
+                <div class="author"><span>Florian N.</span></div>
+                <div class="picture-container playing">
+                    <img src="img/play-button.png" class="player-button">
+                    <div id="pulse" style="display:none"></div>
+                    <img src="img/test-img.png" style="display: none" class="picture">
+                </div>
+                <div class="description">
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam nemo aliquam quod iste maiores
+                        voluptatibus…
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    </div>
+
+    <script src="vendor/api.js"></script>
+    <script src="https://connect.soundcloud.com/sdk/sdk-3.3.2.js"></script>
+    <script src="js/lib.js"></script>
+    <script src="js/aux.js"></script>
+    <script src="js/templates/iframeSCObject.js"></script>
+    <!-- <script src="js/templates/card.js"></script> -->
+    <script src="js/app-test.js"></script>
+    <!-- <script src="js/app.js"></script> -->
+</body>
+
+</html>

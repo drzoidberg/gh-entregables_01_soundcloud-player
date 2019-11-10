@@ -25,11 +25,25 @@ I despres el script per a poder posar el reproductor es aquest...
 
 
 # STEP-BY-STEP (20191107-0831)
-   - eliminar flujo actual de js [ ]
-   - centrarse en mobile por ahora [ ]
-   - crear estructura básica de html/css, donde ira cambiando dinamicamente usando js [ ]
-   - inyectar el iframeSCPlayer siempre en el mismo nodo [ ]
-      *la zona del reproductor y el iframe son 'aparentemente' la misma*
+   - eliminar flujo actual de js [x]
+   - centrarse en mobile por ahora [x]
+   - crear estructura básica de html/css, donde ira cambiando dinamicamente usando js [x]
+   - inyectar el iframeSCPlayer siempre en el mismo nodo [x]
+      *la zona del reproductor y el iframe son 'aparentemente' la misma* [x]
+   - implementar animaciones de .card: [ ]
+      - card mouseover: picture --> opacity: 0; play-button --> opacity: 1 [x]
+      - card click: picture --> opacity: 1; play-button --> opacity: 0; add class .playing [ ] // para más adelante
+   - implementar el drag'n drop y el player: [ ]
+      - start: hacer dropzone visible [x]
+      - ondrag: cambiar estilo del dropzone [x]
+      - ondrop: [x]
+         - dropzone invisible [x]
+         - inyectar el iframe del reproductor con el src actualizado y con el autoplay activado [x]
+   - implementar version desktop [ ]
+   - rellenar el hueco inferior izquierdo del card [ ]
+   - tooltip [ ]
+   - +++…
+
 
 # ROADMAP
    - lógica básica acabada [x]

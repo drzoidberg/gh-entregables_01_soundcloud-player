@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         dropzone.style.background = 'grey';
     });
 
-    // eventos de los element   os 'droppable'
+    // eventos de los elementos 'droppable'
     document.addEventListener('dragover', (event) => {
         // preventdefault para permitir el drop
         event.preventDefault();

@@ -18,21 +18,20 @@ html {
     justify-content: center;
     align-items: center;
     flex-flow: column;
-    background: white;
 }
 
-.logo-container {
+#logo-container {
     width: 280px;
     height: 166px;
     padding-top: 10px;
 }
 
-.logo-container img.logo {
+#logo-container img.logo {
     width: 100%;
     text-align: center;
 }
 
-.dropzone-container {
+#dropzone-container {
     width: 280px;
     height: 166px;
     align-self: center;
@@ -44,7 +43,7 @@ html {
     position: relative;
 }
 
-.dropzone {
+#dropzone {
     width: 280px;
     height: 130px;
     display: flex;
@@ -56,7 +55,7 @@ html {
     margin-top: 20px;
 }
 
-.dropzone .marco-rayado {
+#dropzone .marco-rayado {
     width: 88%;
     height: 78%;
     border-radius: 4px;
@@ -66,7 +65,7 @@ html {
     align-items: center;
 }
 
-.dropzone-container .marco-rayado p {
+#dropzone-container .marco-rayado p {
     color: #FB4C0F;
     font-size: 1.2em;
     width: 80%;
@@ -75,7 +74,8 @@ html {
 }
 
 .toolbar-container {
-    height: 107px;
+    height: 77px;
+    /* height: 107px; */
     background: linear-gradient(-180deg, #424242 0%, #4B4B4B 100%);
     width: 100%;
 }
@@ -93,7 +93,7 @@ html {
     justify-content: center;
 }
 
-.form-container input[type="text"].search {
+.form-container input[type="text"]#search-text-field {
     width: 280px;
     height: 36px;
     border-radius: 4px;
@@ -105,7 +105,7 @@ html {
     transition: .15s all;
 }
 
-.form-container input[type="text"].search:focus {
+.form-container input[type="text"]#search-text-field:focus {
     outline: none;
     border: 1px solid #FFAE6D;
     box-shadow: 0 0 5px #FFAE6D;
@@ -122,7 +122,7 @@ html {
     top: 10px;
 }
 
-.search-button {
+#search-button {
     position: absolute;
     top: 21px;
     right: 21px;
@@ -135,11 +135,11 @@ html {
     transition: .05s all;
 }
 
-.search-button:hover {
+#search-button:hover {
     background: #CCCCCC;
 }
 
-.search-button:active {
+#search-button:active {
         background: #BBBBBB;
 }
 
@@ -168,31 +168,30 @@ html {
     height: 22px;
 }
 
-.results-container {
+#results-container {
     height: 100%;
     width: 100%;
     display: grid;
     grid-template-columns: repeat( auto-fill, minmax(290px, 1fr) );
     grid-gap: 15px 15px;
-    /* justify-content: center; */
-    /* flex-flow: row;
-    flex-wrap: wrap; */
-    /* justify-content: space-evenly; */
     padding: 0 15px 0 15px;
     position: relative;
-    top: 290px;
+    top: 260px;
+    margin-bottom: 20px;
+    background: white;;
 }
 
-.controls-wrapper {
+#controls-wrapper {
     display: flex;
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    background: white;
+    background: #f5f5f5    ;
     position: fixed;
     top: 0;
     z-index: 9;
     box-shadow: 0 1px 6px 0 #333333BB;
+    background: #f5f5f5;
 }
 
 .card {
@@ -205,7 +204,7 @@ html {
     background-image: linear-gradient(-180deg, #FEFAF4 0%, #FFFCF9 100%);
     border: 1px solid #DECBC5;
     border-radius: 4px;
-    cursor: default;
+    cursor: pointer;
     transition: .25s all;
 }
 
@@ -216,42 +215,74 @@ html {
     box-shadow: 0 -6px 12px 0 rgba(136,136,136,0.30);
 }
 
-.card .tag-container {
+.card .duration-container {
     position: relative;
     float: right;
-    top: 7px;
-    right: 7px;
+    top: 4px;
+    right: 6px;
     width: 210px;
-    height: 45px;
+    /* height: 25px; */
     margin-left: 80px;
 }
 
-.card .tag-container:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+.card .duration-container:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
 
-.card .tag-container a.tag {
+.card .duration-container a.duration {
     padding: .2rem .25rem;
     float: right;
     border-radius: 4px;
-    background: #6C6C6C;
-    font-size: .65rem;
-    color: white;
+    /* background: #6C6C6C; */
+    font-size: .8rem;
+    color: #383838;
     text-decoration: none;
 }
 
-.card .tag-container a.tag:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+.card .duration-container a.duration:after, { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
 
-.card .date {
+.card .genre-container {
+    position: relative;
+    float: right;
+    top: 2px;
+    right: 6px;
+    width: 210px;
+    height: 20px;
+    margin-left: 80px;
+    text-align: right;
+}
+
+.card .genre-container img.icon-genre {
+    width: 14px;
+    height: 14px;
+    margin-right: 3px;
+}
+
+.card .genre-container a.genre {
+    padding: 0 .25rem;
+    float: right;
+    border-radius: 4px;
+    /* background: #6C6C6C; */
+    font-size: .8rem;
+    color: #BBBBBB;
+    text-decoration: none;
+}
+
+/* .card .date {
     position: absolute;
     display: inline;
     left: 20px;
     bottom: -15px;
     transform-origin: 0 0;
     transform: rotate(-90deg);
+} */
+
+.card .date {
+    margin-left: 80px;
+    margin-right: 10px;
 }
 
 .card .date span {
-    color: #C6C6C6;
-    font-size: 1.5em;
+    color: #BBBBBB;
+    font-size: .8rem;
 }
 
 .card .name {
@@ -279,11 +310,11 @@ html {
     top: -17px;
     left: -15px;
     z-index: 2;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .card .picture-container img.picture {
-    -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,1) 42%, rgba(0,0,0,0) 100%);
+    -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,1) 42%, rgba(0,0,0,.4) 100%);
 }
 
 .card .picture-container img.picture,
@@ -291,6 +322,8 @@ html {
     width: 90px;
     height: 90px;
     border-radius: 50%;
+    position: absolute;
+    transition: 0.1s opacity;
 }
 
 .card .picture-container.playing #pulse {
@@ -309,12 +342,14 @@ html {
     margin-left: 80px;
     margin-right: 10px;
     overflow: hidden;
+    display: block;
+    height: 195px;
 }
 
 .card .description p {
     font-size: .8rem;
     color: #959595;
-    -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,1) 42%, rgba(0,0,0,.33) 100%);
+    /* -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,1) 42%, rgba(0,0,0,.33) 100%); */
 }
 
 
@@ -335,7 +370,7 @@ html {
     }
     80% {
         transform: scale(2);
-        opacity: .1;
+        opacity: .3;
     }
     100% {
         transform: scale(4);
