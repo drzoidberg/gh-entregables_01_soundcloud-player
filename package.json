@@ -1,7 +1,7 @@
 {
   "name": "web-media-player",
   "version": "1.0.0",
-  "description": "Tiny SPA that uses the Spotify API to fetch and stream content from SPotify using the Spotify API",
+  "description": "Tiny SPA that uses the SoundCloud API to fetch and stream content from SoundCloud using the SoundCloud API",
   "main": "js/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,7 +12,7 @@
   },
   "keywords": [
     "webplayer",
-    "spotify",
+    "soundcloud",
     "api",
     "css",
     "experiment",

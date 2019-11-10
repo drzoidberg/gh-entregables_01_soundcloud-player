@@ -1,6 +1,6 @@
 # gh-entregables_01_web-media-player
 
-## Proyecto 01: Reproductor Web de música que reproduce contenido de Spotify
+## Proyecto 01: Reproductor Web de música que reproduce contenido de SoundCloud
 En este proyecto se intenta demostrar el conocimiento adquirido en el primer bloque del bootcamp de Geekhubs:
 
 * HTML + CSS. Etiquetas HTML y atributos básicos y El modelo de caja
