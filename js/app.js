@@ -18,11 +18,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
     let resultTmp = '';
     const resultsContainer = document.getElementById('results-container');
     const searchSCButton = document.getElementById('search-button');
+    const searchTextField = document.getElementById('search-text-field');
 
     searchSCButton.addEventListener('click', (event) => {
         resultsContainer.innerHTML = ''; // limpia los resultados
 
-        busqueda.q = searchSCButton.value;
+        busqueda.q = searchTextField.value;
         // busqueda.limit = numResultsSC.value;
         busqueda.limit = 20;
 
